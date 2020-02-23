@@ -18,6 +18,7 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
-    "build": "lerna --scope=@myscope/pkg--* exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js"
+    "build:pkgs": "lerna --scope=@myscope/pkg--* exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
+    "mono:clean": "rm -fr node_modules && lerna clean"
   }
 }
