@@ -1,5 +1,5 @@
 {
-  "name": "app--my-react-app",
+  "name": "@myscope/app--my-react-app",
   "version": "1.0.0",
   "private": true,
   "main": "index.js",
@@ -35,6 +35,8 @@
   },
   "dependencies": {
     "@myscope/pkg--button": "*",
+    "@myscope/pkg--button-blue": "1.0.0",
+    "@myscope/pkg--button-green": "1.0.0",
     "core-js": "2.6.10",
     "express": "^4.17.1",
     "react": "^16.12.0",
@@ -46,8 +48,9 @@
   "scripts": {
     "dev": "webpack-dev-server --progress --env.mode=\"development\"",
     "build": "webpack",
+    "build:clean": "rimraf dist",
     "start": "node server.js",
-    "prebuild": "rimraf dist",
+    "prebuild": "yarn build:clean",
     "prestart": "npm-run-all build",
     "clean": "rm -fr node_modules"
   }
