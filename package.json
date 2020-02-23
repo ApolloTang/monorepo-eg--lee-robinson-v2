@@ -1,6 +1,7 @@
 {
   "name": "root",
   "workspaces": [
+    "apps/*",
     "packages/*"
   ],
   "private": true,
