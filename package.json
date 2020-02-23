@@ -10,6 +10,7 @@
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
+    "@storybook/react": "^5.3.13",
     "babel-core": "7.0.0-bridge.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.7",
@@ -17,14 +18,12 @@
     "webpack": "^4.41.6"
   },
   "scripts": {
-    "//": "---- Mono Tooling ----",
     "mono:bootstrap": "lerna bootstrap --use-workspaces",
     "mono:clean": "rm -fr node_modules && lerna clean",
-    "//": "---- Building tools ----",
     "build:pkgs": "lerna --scope=@myscope/pkg--* exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
     "build:all": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
     "build:cleanAll": "yarn workspaces run build:clean && lerna --scope=@myscope/app--* exec --parallel -- rm -fr lib",
-    "//": "---- @myscope/app--my-react-app ----",
+    "story": "start-storybook -p 5555",
     "dev:reactapp": "yarn workspace @myscope/app--my-react-app run dev",
     "build:reactapp": "yarn workspace @myscope/app--my-react-app run build",
     "serve:reactapp": "yarn workspace @myscope/app--my-react-app run start"
