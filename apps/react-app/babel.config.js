@@ -5,8 +5,6 @@ module.exports = (api) => {
 
   console.log('xxxx apps/react-app babel.config.js')
 
-  // const babelrcRoots = ['.']  // has no effect
-
   const presets = [
     [
       '@babel/preset-env',
@@ -30,7 +28,6 @@ module.exports = (api) => {
   ].filter(Boolean)
 
   return {
-    // babelrcRoots,
     presets,
     plugins
   }

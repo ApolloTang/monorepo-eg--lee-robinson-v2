@@ -2,6 +2,7 @@ module.exports = (api) => {
   api.cache(true)
 
   console.log('xxx button-blue babel.config.js')
+
   const out = {
     presets: [
       '@babel/preset-env',
