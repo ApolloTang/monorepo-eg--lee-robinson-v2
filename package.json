@@ -27,5 +27,8 @@
     "dev:reactapp": "yarn workspace @myscope/app--my-react-app run dev",
     "build:reactapp": "yarn workspace @myscope/app--my-react-app run build",
     "serve:reactapp": "yarn workspace @myscope/app--my-react-app run start"
+  },
+  "dependencies": {
+    "core-js": "2.6.11"
   }
 }
