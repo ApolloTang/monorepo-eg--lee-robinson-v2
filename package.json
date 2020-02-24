@@ -19,6 +19,9 @@
     "lerna": "^3.20.2",
     "webpack": "^4.41.6"
   },
+  "dependencies": {
+    "core-js": "^2.6.11"
+  },
   "scripts": {
     "mono:bootstrap": "lerna bootstrap --use-workspaces",
     "mono:clean": "rm -fr node_modules && lerna clean",
@@ -29,8 +32,5 @@
     "dev:reactapp": "yarn workspace @myscope/app--my-react-app run dev",
     "build:reactapp": "yarn workspace @myscope/app--my-react-app run build",
     "serve:reactapp": "yarn workspace @myscope/app--my-react-app run start"
-  },
-  "dependencies": {
-    "core-js": "2.6.11"
   }
 }
